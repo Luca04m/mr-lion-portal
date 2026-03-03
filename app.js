@@ -123,7 +123,7 @@ function initHeroTabs() {
       if (img) {
         img.style.opacity = '0';
         setTimeout(() => {
-          img.src = '../assets/' + prodFolder(prod) + '/garrafa-semfundo.webp';
+          img.src = 'assets/' + prodFolder(prod) + '/garrafa-semfundo.webp';
           img.style.transform = 'scale(' + (HERO_IMG_SCALE[prod] || '1') + ')';
           const nameEl = document.getElementById('hero-prod-name');
           const descEl = document.getElementById('hero-prod-desc');
@@ -168,7 +168,7 @@ function changeImg(prod, file, btn) {
   if (img) {
     img.style.opacity = '0';
     setTimeout(() => {
-      img.src = '../assets/' + prodFolder(prod) + '/' + file;
+      img.src = 'assets/' + prodFolder(prod) + '/' + file;
       img.style.transform = 'scale(' + (PROD_IMG_SCALE[prod] || '1') + ')';
       img.style.opacity = '1';
     }, 180);
@@ -190,7 +190,7 @@ function selectVersao(el, prod, versao) {
   if (img) {
     img.style.opacity = '0';
     setTimeout(() => {
-      img.src = '../assets/' + prodFolder(prod) + '/' + file;
+      img.src = 'assets/' + prodFolder(prod) + '/' + file;
       img.style.opacity = '1';
     }, 180);
   }
