@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Parceiro — Casa Mr. Lion</title>
+  <meta name="description" content="Tabela exclusiva para revendedores CNPJ. Licores premium com marca estabelecida, 500+ pontos de venda ativos e Garantia de Giro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Transição de img inline */
+    .prod-main-img, #hero-main-img { transition: opacity 0.2s; }
+  </style>
+</head>
+<body>
+
+<!-- PROGRESS -->
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <a href="#hero" style="text-decoration:none">
+      <img src="../assets/novalogo.png" alt="Mr. Lion" style="height:30px;display:block">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#tabela">Tabela</a></li>
+      <li><a href="#pagamento">Pagamento</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#garantia">Garantia</a></li>
+      <li><a href="#calculadora">Calculadora</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#calculadora" class="nav-cta">Simular Pedido</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-expanded="false" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="#produtos">Produtos</a>
+  <a href="#tabela">Tabela de Preços</a>
+  <a href="#pagamento">Pagamento</a>
+  <a href="#beneficios">Benefícios e Kit PDV</a>
+  <a href="#garantia">Garantia de Giro</a>
+  <a href="#calculadora">Calculadora</a>
+  <a href="#faq">Perguntas Frequentes</a>
+</nav>
+
+<!-- CHAPTER DOTS -->
+<nav class="chapter-nav" aria-label="Seções"></nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════ -->
+<section id="hero" data-chapter="Início">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Texto -->
+      <div class="reveal">
+        <div class="hero-label">
+          <span class="hero-dot"></span>
+          Portal Exclusivo para Revendedores CNPJ
+        </div>
+        <h1 class="hero-title">
+          A marca que seus clientes<br>
+          <em>já pedem</em> — e você<br>
+          ainda não vende.
+        </h1>
+        <p class="hero-sub">
+          Mr. Lion está presente em mais de 500 pontos de venda no Brasil. Licores premium com 85 mil seguidores, demanda real e uma estrutura de suporte que poucos distribuidores oferecem.
+        </p>
+        <div class="hero-actions">
+          <a href="#tabela" class="btn-gold">Ver Tabela de Preços</a>
+          <a href="#calculadora" class="btn-ghost">Simular Pedido</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-icon">&#10003;</span>
+            CNPJ ativo · Empresa registrada no Brasil
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">&#10003;</span>
+            Nota fiscal disponível
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">&#10003;</span>
+            Garantia de Giro na 1ª compra
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">&#10003;</span>
+            @casamrlion · 85 mil seguidores
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="reveal reveal-delay-2">
+        <div class="hero-product-frame">
+          <span class="hero-product-label">Linha Mr. Lion · Selecione o produto</span>
+          <img id="hero-main-img" class="hero-product-img"
+               src="../assets/honey/garrafa-semfundo.webp" alt="Mr. Lion Honey">
+          <div class="hero-product-name" id="hero-prod-name">Mr. Lion Honey</div>
+          <div class="hero-product-desc" id="hero-prod-desc">Licor de Whisky com Mel · 720ml · 40% Vol</div>
+          <div class="hero-product-tabs">
+            <button class="hero-ptab active" data-prod="honey">Honey</button>
+            <button class="hero-ptab" data-prod="capp">Cappuccino</button>
+            <button class="hero-ptab" data-prod="blend">Blended</button>
+          </div>
+        </div>
+        <div class="hero-stats reveal reveal-delay-3" style="margin-top:-1px">
+          <div class="hero-stat">
+            <span class="n">500+</span>
+            <span class="l">Pontos de venda ativos no Brasil</span>
+          </div>
+          <div class="hero-stat">
+            <span class="n">85K</span>
+            <span class="l">Seguidores @casamrlion</span>
+          </div>
+          <div class="hero-stat">
+            <span class="n">50K+</span>
+            <span class="l">Garrafas vendidas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROVA SOCIAL
+     ═══════════════════════════════════════════════════════ -->
+<div id="prova">
+  <div class="prova-inner">
+    <div class="prova-item">
+      <div class="prova-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="prova-text">
+        <div class="pt">500+ pontos de venda</div>
+        <div class="ps">Presença em todo o Brasil</div>
+      </div>
+    </div>
+    <div class="prova-item">
+      <div class="prova-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <div class="prova-text">
+        <div class="pt">Empresa com CNPJ ativo</div>
+        <div class="ps">Nota fiscal disponível para todos os estados</div>
+      </div>
+    </div>
+    <div class="prova-item">
+      <div class="prova-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div class="prova-text">
+        <div class="pt">Garantia de Giro</div>
+        <div class="ps">Recompra garantida na 1ª compra se não girar</div>
+      </div>
+    </div>
+    <div class="prova-item">
+      <div class="prova-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <div class="prova-text">
+        <div class="pt">Suporte comercial ativo</div>
+        <div class="ps">Kit PDV, vídeo de divulgação e orientação de vendas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRODUTOS
+     ═══════════════════════════════════════════════════════ -->
+<section id="produtos" data-chapter="Produtos">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">01 — Linha de Produtos</div>
+      <h2>Três produtos. Uma marca consolidada.</h2>
+      <div class="divider"></div>
+      <p class="sub">Cada produto tem características únicas de posicionamento. Escolha a versão que melhor encaixa no seu ponto de venda.</p>
+    </div>
+
+    <div class="prod-tabs reveal">
+      <button class="ptab active" onclick="switchProd('honey')">Honey</button>
+      <button class="ptab"        onclick="switchProd('capp')">Cappuccino</button>
+      <button class="ptab"        onclick="switchProd('blend')">Blended</button>
+    </div>
+
+    <!-- HONEY -->
+    <div class="prod-panel active" id="prod-honey">
+      <div class="prod-gallery reveal">
+        <img class="prod-main-img" id="img-honey" src="../assets/honey/completo-semfundo.webp" alt="Mr. Lion Honey" style="transition:opacity 0.2s">
+        <div class="prod-thumbs">
+          <button class="thumb active" onclick="changeImg('honey','completo-semfundo.webp',this)"><img src="../assets/honey/completo-semfundo.webp" alt="Completo"></button>
+          <button class="thumb"        onclick="changeImg('honey','garrafa-semfundo.webp',this)"><img src="../assets/honey/garrafa-semfundo.webp" alt="Garrafa"></button>
+          <button class="thumb"        onclick="changeImg('honey','pingente-semfundo.webp',this)"><img src="../assets/honey/pingente-semfundo.webp" alt="Pingente"></button>
+          <button class="thumb"        onclick="changeImg('honey','foto1.webp',this)"><img src="../assets/honey/foto1.webp" alt="Foto ambiente"></button>
+          <button class="thumb"        onclick="changeImg('honey','foto2.webp',this)"><img src="../assets/honey/foto2.webp" alt="Foto produto"></button>
+        </div>
+      </div>
+      <div class="prod-info reveal reveal-delay-1">
+        <span class="tag gold prod-tag">Carro-chefe · 65% do volume</span>
+        <h2 class="prod-name">Mr. Lion Honey</h2>
+        <p class="prod-specs">Licor de Whisky com Mel · 750ml · 40% Vol</p>
+        <p class="prod-desc">Whisky brasileiro com mel artesanal. Sabor suave e de alta aceitação — o SKU mais vendido da marca. Clientes que provam voltam a pedir.</p>
+        <div class="versoes-grid">
+          <div class="versao-card active" onclick="selectVersao(this,'honey','completo')">
+            <img src="../assets/honey/completo-semfundo.webp" alt="Completo">
+            <div class="vn">Completo</div>
+            <div class="vp">a partir de R$ 80</div>
+            <div class="vs">Garrafa + Lata + Pingente</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'honey','pingente')">
+            <img src="../assets/honey/pingente-semfundo.webp" alt="Pingente">
+            <div class="vn">Pingente</div>
+            <div class="vp">a partir de R$ 70</div>
+            <div class="vs">Garrafa + Pingente decorativo</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'honey','garrafa')">
+            <img src="../assets/honey/garrafa-semfundo.webp" alt="Garrafa">
+            <div class="vn">Só Garrafa</div>
+            <div class="vp">a partir de R$ 68</div>
+            <div class="vs">Garrafa sem acessórios</div>
+          </div>
+        </div>
+        <div class="preco-label">Preço por garrafa a partir de</div>
+        <div class="preco-val">R$ 68</div>
+        <div class="preco-note">Nível 5 · Pix ou Boleto · Sem nota fiscal</div>
+        <div class="prod-actions">
+          <a href="#tabela"      class="btn-gold">Tabela Completa</a>
+          <a href="#calculadora" class="btn-ghost">Simular Pedido</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAPPUCCINO -->
+    <div class="prod-panel" id="prod-capp">
+      <div class="prod-gallery reveal">
+        <img class="prod-main-img" id="img-capp" src="../assets/cappuccino/completo-semfundo.webp" alt="Mr. Lion Cappuccino" style="transition:opacity 0.2s">
+        <div class="prod-thumbs">
+          <button class="thumb active" onclick="changeImg('capp','completo-semfundo.webp',this)"><img src="../assets/cappuccino/completo-semfundo.webp" alt="Completo"></button>
+          <button class="thumb"        onclick="changeImg('capp','garrafa-semfundo.webp',this)"><img src="../assets/cappuccino/garrafa-semfundo.webp" alt="Garrafa"></button>
+          <button class="thumb"        onclick="changeImg('capp','pingente-semfundo.webp',this)"><img src="../assets/cappuccino/pingente-semfundo.webp" alt="Pingente"></button>
+          <button class="thumb"        onclick="changeImg('capp','foto1.webp',this)"><img src="../assets/cappuccino/foto1.webp" alt="Foto ambiente"></button>
+          <button class="thumb"        onclick="changeImg('capp','foto2.webp',this)"><img src="../assets/cappuccino/foto2.webp" alt="Foto produto"></button>
+        </div>
+      </div>
+      <div class="prod-info reveal reveal-delay-1">
+        <span class="tag gold prod-tag">Diferencial de gôndola · 29% do volume</span>
+        <h2 class="prod-name">Mr. Lion Cappuccino</h2>
+        <p class="prod-specs">Licor Fino de Whisky e Cappuccino · 750ml · 17% Vol</p>
+        <p class="prod-desc">Blend exclusivo de whisky com café artesanal. Garrafa branca com identidade única — produto que se destaca visualmente e tem baixa concorrência direta no segmento.</p>
+        <div class="versoes-grid">
+          <div class="versao-card active" onclick="selectVersao(this,'capp','completo')">
+            <img src="../assets/cappuccino/completo-semfundo.webp" alt="Completo">
+            <div class="vn">Completo</div>
+            <div class="vp">a partir de R$ 82</div>
+            <div class="vs">Garrafa + Lata + Pingente</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'capp','pingente')">
+            <img src="../assets/cappuccino/pingente-semfundo.webp" alt="Pingente">
+            <div class="vn">Pingente</div>
+            <div class="vp">a partir de R$ 73</div>
+            <div class="vs">Garrafa + Pingente decorativo</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'capp','garrafa')">
+            <img src="../assets/cappuccino/garrafa-semfundo.webp" alt="Garrafa">
+            <div class="vn">Só Garrafa</div>
+            <div class="vp">a partir de R$ 72</div>
+            <div class="vs">Garrafa sem acessórios</div>
+          </div>
+        </div>
+        <div class="preco-label">Preço por garrafa a partir de</div>
+        <div class="preco-val">R$ 72</div>
+        <div class="preco-note">Nível 5 · Pix ou Boleto · Sem nota fiscal</div>
+        <div class="prod-actions">
+          <a href="#tabela"      class="btn-gold">Tabela Completa</a>
+          <a href="#calculadora" class="btn-ghost">Simular Pedido</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLENDED -->
+    <div class="prod-panel" id="prod-blend">
+      <div class="prod-gallery reveal">
+        <img class="prod-main-img" id="img-blend" src="../assets/blended/completo-semfundo.webp" alt="Mr. Lion Blended" style="transition:opacity 0.2s">
+        <div class="prod-thumbs">
+          <button class="thumb active" onclick="changeImg('blend','completo-semfundo.webp',this)"><img src="../assets/blended/completo-semfundo.webp" alt="Completo"></button>
+          <button class="thumb"        onclick="changeImg('blend','garrafa-semfundo.webp',this)"><img src="../assets/blended/garrafa-semfundo.webp" alt="Garrafa"></button>
+          <button class="thumb"        onclick="changeImg('blend','pingente-semfundo.webp',this)"><img src="../assets/blended/pingente-semfundo.webp" alt="Pingente"></button>
+          <button class="thumb"        onclick="changeImg('blend','foto1.webp',this)"><img src="../assets/blended/foto1.webp" alt="Foto ambiente"></button>
+          <button class="thumb"        onclick="changeImg('blend','foto2.webp',this)"><img src="../assets/blended/foto2.webp" alt="Foto produto"></button>
+        </div>
+      </div>
+      <div class="prod-info reveal reveal-delay-1">
+        <span class="tag gold prod-tag">Premium · Brazilian Blended Whisky</span>
+        <h2 class="prod-name">Mr. Lion Blended</h2>
+        <p class="prod-specs">Brazilian Blended Whisky · 750ml · 40% Vol</p>
+        <p class="prod-desc">Blend encorpado de grãos e malte envelhecido em caixa premium exclusiva. Público exigente com ticket mais alto — 93% dos compradores escolhem a versão Completa.</p>
+        <div class="versoes-grid">
+          <div class="versao-card active" onclick="selectVersao(this,'blend','completo')">
+            <img src="../assets/blended/completo-semfundo.webp" alt="Completo">
+            <div class="vn">Completo</div>
+            <div class="vp">a partir de R$ 63</div>
+            <div class="vs">Garrafa + Caixa premium + Pingente</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'blend','pingente')">
+            <img src="../assets/blended/pingente-semfundo.webp" alt="Pingente">
+            <div class="vn">Pingente</div>
+            <div class="vp">a partir de R$ 60</div>
+            <div class="vs">Garrafa + Pingente decorativo</div>
+          </div>
+          <div class="versao-card" onclick="selectVersao(this,'blend','garrafa')">
+            <img src="../assets/blended/garrafa-semfundo.webp" alt="Garrafa">
+            <div class="vn">Só Garrafa</div>
+            <div class="vp">a partir de R$ 55</div>
+            <div class="vs">Garrafa sem acessórios</div>
+          </div>
+        </div>
+        <div class="preco-label">Preço por garrafa a partir de</div>
+        <div class="preco-val">R$ 55</div>
+        <div class="preco-note">Nível 5 · Pix ou Boleto · Sem nota fiscal</div>
+        <div class="prod-actions">
+          <a href="#tabela"      class="btn-gold">Tabela Completa</a>
+          <a href="#calculadora" class="btn-ghost">Simular Pedido</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TABELA
+     ═══════════════════════════════════════════════════════ -->
+<section id="tabela" class="section-alt" data-chapter="Preços">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">02 — Tabela de Compra para Revenda</div>
+      <h2>Quanto mais você compra,<br><em>maior a sua margem.</em></h2>
+      <div class="divider"></div>
+      <p class="sub">Valores em R$ por garrafa. Válido para Pix ou Boleto sem nota fiscal. Pedido mínimo para a primeira compra: 1 caixa (6 garrafas).</p>
+    </div>
+
+    <!-- Desconto por nível -->
+    <div class="discount-band reveal" style="margin-bottom:0">
+      <div class="discount-item"><div class="di-lvl">Nível 1</div><div class="di-val">—</div><div class="di-base">Base</div></div>
+      <div class="discount-item"><div class="di-lvl">Nível 2</div><div class="di-val">~7%</div><div class="di-base">vs. Nível 1</div></div>
+      <div class="discount-item"><div class="di-lvl">Nível 3</div><div class="di-val">~14%</div><div class="di-base">vs. Nível 1</div></div>
+      <div class="discount-item"><div class="di-lvl">Nível 4</div><div class="di-val">~18%</div><div class="di-base">vs. Nível 1</div></div>
+      <div class="discount-item"><div class="di-lvl">Nível 5</div><div class="di-val">~22%</div><div class="di-base">vs. Nível 1</div></div>
+    </div>
+
+    <!-- Level nav — sem overflow:hidden para não cortar as badges -->
+    <div class="level-nav reveal" style="margin-top:32px">
+      <button class="lvl-btn active" onclick="switchLvl(1)">
+        <span class="ln">Nível 1</span>
+        <span class="ls">Até 5 caixas</span>
+      </button>
+      <button class="lvl-btn" onclick="switchLvl(2)">
+        <span class="ln">Nível 2</span>
+        <span class="ls">Até 10 caixas</span>
+      </button>
+      <button class="lvl-btn" onclick="switchLvl(3)">
+        <span class="lvl-badge">Mais Popular</span>
+        <span class="ln">Nível 3</span>
+        <span class="ls">Até 20 caixas</span>
+      </button>
+      <button class="lvl-btn" onclick="switchLvl(4)">
+        <span class="ln">Nível 4</span>
+        <span class="ls">Até 40 caixas</span>
+      </button>
+      <button class="lvl-btn" onclick="switchLvl(5)">
+        <span class="lvl-badge green">Melhor Preço</span>
+        <span class="ln">Nível 5</span>
+        <span class="ls">40+ caixas</span>
+      </button>
+    </div>
+
+    <div class="tbl-panel active" id="tbl-1">
+      <div class="tbl-header">
+        <h3 class="tbl-title">Nível 1 — <span>Entrada</span></h3>
+        <div class="tbl-tags"><span class="tag">1–5 caixas</span><span class="tag">6–30 garrafas</span><span class="tag gold">Pedido mínimo</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="ptbl">
+        <thead><tr><th>Produto</th><th>Completo<br><small style="font-weight:400;font-size:.62rem;color:var(--dim)">garrafa+lata+pingente</small></th><th>Pingente<br><small style="font-weight:400;font-size:.62rem;color:var(--dim)">garrafa+pingente</small></th><th>Só Garrafa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pdot capp-dot"></span>Cappuccino</td><td class="tc">R$ 107</td><td class="tp">R$ 95</td><td class="tg">R$ 93</td></tr>
+          <tr><td><span class="pdot honey-dot"></span>Honey</td>      <td class="tc">R$ 104</td><td class="tp">R$ 91</td><td class="tg">R$ 88</td></tr>
+          <tr><td><span class="pdot blend-dot"></span>Blended</td>    <td class="tc">R$ 83</td> <td class="tp">R$ 75</td><td class="tg">R$ 73</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl-note">Pedido mínimo para a <strong style="color:var(--text)">primeira compra: 1 caixa (6 garrafas)</strong>. Você pode misturar produtos e versões.</div>
+    </div>
+
+    <div class="tbl-panel" id="tbl-2">
+      <div class="tbl-header">
+        <h3 class="tbl-title">Nível 2 — <span>Volume Inicial</span></h3>
+        <div class="tbl-tags"><span class="tag">6–10 caixas</span><span class="tag">36–60 garrafas</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="ptbl">
+        <thead><tr><th>Produto</th><th>Completo</th><th>Pingente</th><th>Só Garrafa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pdot capp-dot"></span>Cappuccino</td><td class="tc">R$ 99</td><td class="tp">R$ 87</td><td class="tg">R$ 86</td></tr>
+          <tr><td><span class="pdot honey-dot"></span>Honey</td>      <td class="tc">R$ 96</td><td class="tp">R$ 84</td><td class="tg">R$ 81</td></tr>
+          <tr><td><span class="pdot blend-dot"></span>Blended</td>    <td class="tc">R$ 76</td><td class="tp">R$ 72</td><td class="tg">R$ 69</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl-note">Pagamento via Pix ou Boleto. Com nota fiscal, consulte a <a href="#pagamento" style="color:var(--gold)">seção de pagamento</a>.</div>
+    </div>
+
+    <div class="tbl-panel" id="tbl-3">
+      <div class="tbl-header">
+        <h3 class="tbl-title">Nível 3 — <span>Revenda Ativa</span></h3>
+        <div class="tbl-tags"><span class="tag">11–20 caixas</span><span class="tag">66–120 garrafas</span><span class="tag gold">Mais Popular</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="ptbl">
+        <thead><tr><th>Produto</th><th>Completo</th><th>Pingente</th><th>Só Garrafa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pdot capp-dot"></span>Cappuccino</td><td class="tc">R$ 90</td><td class="tp">R$ 81</td><td class="tg">R$ 80</td></tr>
+          <tr><td><span class="pdot honey-dot"></span>Honey</td>      <td class="tc">R$ 88</td><td class="tp">R$ 77</td><td class="tg">R$ 74</td></tr>
+          <tr><td><span class="pdot blend-dot"></span>Blended</td>    <td class="tc">R$ 70</td><td class="tp">R$ 67</td><td class="tg">R$ 62</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl-note">Equilíbrio ideal entre investimento inicial e margem. Nível mais pedido pelos parceiros ativos.</div>
+    </div>
+
+    <div class="tbl-panel" id="tbl-4">
+      <div class="tbl-header">
+        <h3 class="tbl-title">Nível 4 — <span>Alta Escala</span></h3>
+        <div class="tbl-tags"><span class="tag">21–40 caixas</span><span class="tag">126–240 garrafas</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="ptbl">
+        <thead><tr><th>Produto</th><th>Completo</th><th>Pingente</th><th>Só Garrafa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pdot capp-dot"></span>Cappuccino</td><td class="tc">R$ 85</td><td class="tp">R$ 76</td><td class="tg">R$ 75</td></tr>
+          <tr><td><span class="pdot honey-dot"></span>Honey</td>      <td class="tc">R$ 83</td><td class="tp">R$ 77</td><td class="tg">R$ 74</td></tr>
+          <tr><td><span class="pdot blend-dot"></span>Blended</td>    <td class="tc">R$ 70</td><td class="tp">R$ 63</td><td class="tg">R$ 62</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl-note">Ideal para múltiplos pontos de venda ou operações com maior giro mensal.</div>
+    </div>
+
+    <div class="tbl-panel" id="tbl-5">
+      <div class="tbl-header">
+        <h3 class="tbl-title">Nível 5 — <span>Lucro Máximo</span></h3>
+        <div class="tbl-tags"><span class="tag">40+ caixas</span><span class="tag">240+ garrafas</span><span class="tag green">Melhor Preço</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="ptbl">
+        <thead><tr><th>Produto</th><th>Completo</th><th>Pingente</th><th>Só Garrafa</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pdot capp-dot"></span>Cappuccino</td><td class="tc">R$ 82</td><td class="tp">R$ 73</td><td class="tg">R$ 72</td></tr>
+          <tr><td><span class="pdot honey-dot"></span>Honey</td>      <td class="tc">R$ 80</td><td class="tp">R$ 70</td><td class="tg">R$ 68</td></tr>
+          <tr><td><span class="pdot blend-dot"></span>Blended</td>    <td class="tc">R$ 63</td><td class="tp">R$ 60</td><td class="tg">R$ 55</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl-note">Condição exclusiva para grandes volumes. Entre em contato para negociar condições especiais acima de 40 caixas.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGAMENTO
+     ═══════════════════════════════════════════════════════ -->
+<section id="pagamento" data-chapter="Pagamento">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">03 — Formas de Pagamento</div>
+      <h2>Transparência total nos custos.</h2>
+      <div class="divider"></div>
+      <p class="sub">Os preços da tabela são válidos para Pix e Boleto, sem nota fiscal. Veja abaixo todas as condições.</p>
+    </div>
+
+    <div class="pay-grid reveal">
+
+      <!-- PIX / BOLETO -->
+      <div class="pay-card">
+        <div class="pay-card-head">
+          <div class="pay-badge"><span class="tag green">Disponível</span></div>
+          <div class="pay-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3zM3 21h18v-2H3zM3 3v6l2-2 3 3 1.414-1.414L6.414 5.586 8 4H3z"/></svg>
+          </div>
+          <div class="pay-name">Pix ou Boleto</div>
+          <p class="pay-desc">Pagamento sem nota fiscal. Os preços da tabela são aplicados exatamente como listados — sem nenhum acréscimo.</p>
+        </div>
+        <div class="pay-body">
+          <div class="pay-highlight">
+            <div class="ph-label">Valor cobrado</div>
+            <div class="ph-val">Preço da tabela · Sem acréscimo</div>
+          </div>
+          <ul class="pay-list">
+            <li><span class="ok">&#10003;</span>Preço exato da tabela, sem surpresas</li>
+            <li><span class="ok">&#10003;</span>Confirmação em até 1 dia útil</li>
+            <li><span class="ok">&#10003;</span>Melhor custo para maximizar sua margem</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- NOTA FISCAL -->
+      <div class="pay-card">
+        <div class="pay-card-head">
+          <div class="pay-badge"><span class="tag gold">Com NF</span></div>
+          <div class="pay-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <div class="pay-name">Pix ou Boleto com Nota Fiscal</div>
+          <p class="pay-desc">Para empresas que precisam de nota fiscal. Disponível tanto para Pix quanto Boleto. O imposto estadual é adicionado sobre o valor da tabela.</p>
+        </div>
+        <div class="pay-body">
+          <div class="nf-states">
+            <div class="nf-state">
+              <div class="ns-pct g">+12%</div>
+              <div class="ns-list">SP · BA · GO · RJ · SE</div>
+            </div>
+            <div class="nf-state">
+              <div class="ns-pct a">+33%</div>
+              <div class="ns-list">Demais estados</div>
+            </div>
+          </div>
+          <ul class="pay-list">
+            <li><span class="warn">&#9888;</span>Informe o estado na hora do pedido</li>
+            <li><span class="ok">&#10003;</span>Nota fiscal emitida normalmente</li>
+            <li><span class="ok">&#10003;</span>Válido para qualquer estado brasileiro</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARTÃO -->
+      <div class="pay-card pay-locked">
+        <div class="pay-card-head">
+          <div class="pay-badge"><span class="tag">Sob Consulta</span></div>
+          <div class="pay-icon-wrap" style="opacity:.5">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+          </div>
+          <div class="pay-name">Cartão de Crédito</div>
+          <p class="pay-desc">Disponível para pedidos negociados diretamente com o time comercial. Sujeito a condições específicas.</p>
+        </div>
+        <div class="pay-body">
+          <div class="locked-overlay">
+            <div class="lo-title">Disponível via Atendimento</div>
+            <div class="lo-text">Esta modalidade é operada individualmente para pedidos com negociação direta. Fale com o time para verificar condições.</div>
+            <a href="https://wa.me/5531984463634?text=Olá!%20Tenho%20interesse%20em%20pagamento%20por%20cartão%20de%20crédito." class="btn-gold" target="_blank" rel="noopener" style="font-size:.75rem;padding:9px 16px">Falar com o time</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     BENEFÍCIOS
+     ═══════════════════════════════════════════════════════ -->
+<section id="beneficios" class="section-alt" data-chapter="Benefícios">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">04 — Além do Preço</div>
+      <h2>O que você recebe como parceiro.</h2>
+      <div class="divider"></div>
+      <p class="sub">Entrar para a rede Mr. Lion vai além de comprar produtos. Você recebe apoio real para vender.</p>
+    </div>
+
+    <div class="beneficios-layout reveal">
+
+      <!-- Vídeo do MD — destaque principal -->
+      <div class="video-md-card">
+        <div class="video-md-head">
+          <div class="video-md-kicker">Benefício Exclusivo — 24 ou mais unidades</div>
+          <h3 class="video-md-title">Vídeo do MD divulgando<br>o seu estabelecimento</h3>
+          <p class="video-md-sub">Ao comprar 24 ou mais unidades, você recebe um vídeo exclusivo gravado pelo MD Chefe apresentando o seu ponto de venda para os seguidores dele. Conteúdo pronto para usar nas suas redes sociais.</p>
+        </div>
+        <div class="video-md-body">
+          <div class="video-md-condition">
+            <div class="vmc-num">24+</div>
+            <div class="vmc-text">
+              <div class="vt">unidades no pedido</div>
+              <div class="vs">Equivalente a 4 caixas ou mais</div>
+            </div>
+          </div>
+          <ul class="video-md-list">
+            <li><span class="vi">&#10003;</span>Vídeo personalizado com o nome do seu estabelecimento</li>
+            <li><span class="vi">&#10003;</span>Postagem e destaque no Instagram @casamrlion (85K seguidores)</li>
+            <li><span class="vi">&#10003;</span>Conteúdo licenciado para uso nas suas redes sociais</li>
+            <li><span class="vi">&#10003;</span>Divulgação regional para potenciais clientes da sua área</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Info adicional -->
+      <div style="display:flex;flex-direction:column;gap:16px;justify-content:flex-start">
+        <div class="min-order-box">
+          <div class="mob-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          </div>
+          <div class="mob-text">
+            <div class="mt">Pedido mínimo: 1 caixa (6 garrafas)</div>
+            <div class="ms">Você pode misturar produtos e versões no mesmo pedido</div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:3px;padding:20px 22px;">
+          <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:12px">Mais benefícios como parceiro</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&#10003;</span>Destaque no Instagram @casamrlion (85K seguidores)</li>
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&#10003;</span>Repost e story marcando sua loja</li>
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&#10003;</span>Inclusão na lista mensal de revendedores</li>
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&#10003;</span>Orientação comercial e apoio de precificação</li>
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">&#10003;</span>Garantia de Giro na primeira compra (4+ caixas)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     GARANTIA DE GIRO
+     ═══════════════════════════════════════════════════════ -->
+<section id="garantia" data-chapter="Garantia">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">05 — Programa Exclusivo 2026</div>
+      <h2>Garantia de Giro:<br><em>compramos de volta se você não vender.</em></h2>
+      <div class="divider"></div>
+      <p class="sub">Desenvolvido para eliminar a objeção número um do lojista. Você testa o produto sem assumir o risco sozinho.</p>
+    </div>
+
+    <div class="garantia-layout reveal">
+
+      <div class="garantia-intro">
+        <p class="gi-headline">
+          "A Mr. Lion não vende produto.<br>
+          <em>A Mr. Lion participa do giro junto com você.</em>"
+        </p>
+        <p class="gi-text">
+          Se você aplicar o plano de vendas orientado pela equipe e mesmo assim não conseguir girar o estoque em 30 dias, a Mr. Lion recompra o produto e devolve o valor pago integralmente. Sem burocracia, sem enrolação.
+        </p>
+
+        <div class="garantia-steps">
+          <div class="gstep">
+            <div class="gstep-num">1</div>
+            <div class="gstep-content">
+              <div class="gs-title">Você compra mínimo 4 caixas (24 garrafas)</div>
+              <div class="gs-desc">Válido exclusivamente para a primeira compra. O pedido se qualifica automaticamente.</div>
+            </div>
+          </div>
+          <div class="gstep">
+            <div class="gstep-num">2</div>
+            <div class="gstep-content">
+              <div class="gs-title">Recebe o kit de vendas e divulgação da Mr. Lion</div>
+              <div class="gs-desc">Repost no Instagram do MD, story marcando seu estabelecimento e orientação de posicionamento e precificação.</div>
+            </div>
+          </div>
+          <div class="gstep">
+            <div class="gstep-num">3</div>
+            <div class="gstep-content">
+              <div class="gs-title">30 dias para girar o estoque</div>
+              <div class="gs-desc">Prazo a partir da data de recebimento. A equipe fica disponível para orientação comercial durante esse período.</div>
+            </div>
+          </div>
+          <div class="gstep">
+            <div class="gstep-num" style="background:var(--gold);color:#000;border:none;font-size:.8rem">OK</div>
+            <div class="gstep-content">
+              <div class="gs-title" style="color:var(--gold)">Não girou? Mr. Lion recompra e devolve o valor.</div>
+              <div class="gs-desc">Produto deve estar lacrado, intacto e em perfeito estado. Frete de retorno por conta do parceiro.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="garantia-card">
+        <div class="gc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <h3 class="gc-title">Programa Garantia de Giro</h3>
+        <p class="gc-desc">Condições objetivas e transparentes. Leia com atenção antes de acionar.</p>
+        <ul class="gc-terms">
+          <li><span class="ok">&#10003;</span>Válido somente na primeira compra</li>
+          <li><span class="ok">&#10003;</span>Pedido mínimo: 4 caixas (24 garrafas)</li>
+          <li><span class="ok">&#10003;</span>Prazo de avaliação: 30 dias corridos</li>
+          <li><span class="ok">&#10003;</span>Mr. Lion recompra e devolve o valor integral</li>
+          <li><span class="warn">&#9888;</span>Produto deve estar lacrado e intacto</li>
+          <li><span class="warn">&#9888;</span>Frete de retorno por conta do parceiro</li>
+          <li><span class="warn">&#9888;</span>Garantia ativada após apoio comercial prestado</li>
+        </ul>
+        <div class="gc-quote">
+          "Você entra com o produto certo, o suporte da marca e a garantia por trás. O risco é compartilhado."
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CALCULADORA — PEDIDO MISTO
+     ═══════════════════════════════════════════════════════ -->
+<section id="calculadora" class="section-alt" data-chapter="Calculadora">
+  <div class="container">
+    <div class="sh reveal">
+      <div class="sh-chapter">06 — Simulador de Pedido</div>
+      <h2>Monte seu pedido.<br><em>Calcule o custo real.</em></h2>
+      <div class="divider"></div>
+      <p class="sub">Adicione quantos produtos quiser. O nível de preço é calculado sobre o total de caixas do pedido inteiro.</p>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:var(--gold-bg);border:1px solid var(--gold-bdr);border-radius:3px;padding:8px 16px;margin-top:4px;font-size:.78rem;color:var(--gold)">
+        Os valores calculados são para <strong style="margin:0 4px">Pix ou Boleto sem emissão de nota fiscal</strong>. Com NF, selecione abaixo para ver o acréscimo.
+      </div>
+    </div>
+
+    <div class="calc-layout reveal">
+
+      <!-- Formulário -->
+      <div class="calc-form-box">
+        <div class="calc-form-head">
+          <h3>Adicionar item ao pedido</h3>
+          <p>Selecione o produto, a versão e a quantidade de caixas.</p>
+        </div>
+        <div class="calc-form-body">
+
+          <div class="field-row">
+            <div class="field">
+              <label>Produto</label>
+              <select id="calc-prod" class="inp">
+                <option value="">-- Selecione --</option>
+                <option value="honey">Honey</option>
+                <option value="capp">Cappuccino</option>
+                <option value="blend">Blended</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Caixas <span style="font-weight:400;opacity:.6">(1 cx = 6 garrafas)</span></label>
+              <input type="number" id="calc-caixas" class="inp" min="1" max="999" value="1">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Versão</label>
+            <div class="radio-group">
+              <div class="ropt">
+                <input type="radio" name="calc-versao" id="v-completo" value="completo">
+                <label for="v-completo">Completo<br><small style="font-weight:400;font-size:.65rem;opacity:.65">garrafa+lata+pingente</small></label>
+              </div>
+              <div class="ropt">
+                <input type="radio" name="calc-versao" id="v-pingente" value="pingente">
+                <label for="v-pingente">Pingente<br><small style="font-weight:400;font-size:.65rem;opacity:.65">garrafa+pingente</small></label>
+              </div>
+              <div class="ropt">
+                <input type="radio" name="calc-versao" id="v-garrafa" value="garrafa" checked>
+                <label for="v-garrafa">Só Garrafa<br><small style="font-weight:400;font-size:.65rem;opacity:.65">sem acessórios</small></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-btn">
+            <button class="btn-gold full" onclick="addToCart()">+ Adicionar ao pedido</button>
+          </div>
+
+          <!-- Carrinho -->
+          <div class="cart-section" style="margin-top:24px">
+            <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px">Itens do pedido</div>
+            <div id="cart-container">
+              <div class="cart-empty">Nenhum item adicionado. Selecione produto e versão acima.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Resultado -->
+      <div class="calc-result">
+        <div class="cr-top">
+          <div class="cr-top-label">Simulação de Pedido</div>
+          <div class="cr-top-title">Adicione itens para calcular</div>
+        </div>
+
+        <div id="cr-empty" class="cr-empty">
+          Adicione ao menos um produto para ver o resumo do pedido.
+        </div>
+
+        <div id="cr-rows" class="cr-rows" style="display:none"></div>
+
+        <!-- NF toggle — aparece quando há itens -->
+        <div id="nf-toggle-wrap" class="nf-toggle-wrap" style="display:none">
+          <div class="nf-toggle-label">Nota Fiscal?</div>
+          <div class="nf-opts">
+            <div class="nf-opt">
+              <input type="radio" name="nf" id="nf-nao" value="nao" checked onchange="toggleNF()">
+              <label for="nf-nao">Sem NF<br><small style="opacity:.65">Preço da tabela</small></label>
+            </div>
+            <div class="nf-opt">
+              <input type="radio" name="nf" id="nf-sim" value="sim" onchange="toggleNF()">
+              <label for="nf-sim">Com NF<br><small style="opacity:.65">+ imposto</small></label>
+            </div>
+          </div>
+        </div>
+        <div id="nf-state-row" class="nf-state-row" style="display:none;padding-bottom:12px">
+          <select id="calc-estado" class="inp" onchange="renderSummary()" style="margin-top:8px">
+            <option value="">-- Selecione o estado de entrega --</option>
+            <optgroup label="Imposto 12%">
+              <option value="12">SP — São Paulo</option>
+              <option value="12">RJ — Rio de Janeiro</option>
+              <option value="12">BA — Bahia</option>
+              <option value="12">GO — Goiás</option>
+              <option value="12">SE — Sergipe</option>
+            </optgroup>
+            <optgroup label="Imposto 33%">
+              <option value="33">MG — Minas Gerais</option>
+              <option value="33">RS — Rio Grande do Sul</option>
+              <option value="33">PR — Paraná</option>
+              <option value="33">SC — Santa Catarina</option>
+              <option value="33">PE — Pernambuco</option>
+              <option value="33">CE — Ceará</option>
+              <option value="33">PA — Pará</option>
+              <option value="33">AM — Amazonas</option>
+              <option value="33">ES — Espírito Santo</option>
+              <option value="33">MT — Mato Grosso</option>
+              <option value="33">MS — Mato Grosso do Sul</option>
+              <option value="33">DF — Distrito Federal</option>
+              <option value="33">Outros estados</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div id="cr-total-block" style="display:none">
+          <div class="cr-total-block">
+            <div class="cr-total-label">Total estimado do pedido</div>
+            <div class="cr-total-val" id="cr-total-val">R$ 0,00</div>
+            <div class="cr-total-note" id="cr-total-note">Pix ou Boleto · Sem nota fiscal</div>
+          </div>
+        </div>
+
+        <div class="cr-frete-warn">
+          Frete não incluso. Consulte o valor de frete para sua região no atendimento antes de fechar o pedido.
+        </div>
+
+        <div id="cr-bonus-24" class="cr-bonus gold-bg" style="display:none">
+          Pedido com 24+ unidades: você recebe vídeo exclusivo do MD divulgando seu estabelecimento.
+        </div>
+        <div id="cr-bonus-garantia" class="cr-bonus green-bg" style="display:none">
+          Pedido elegível para o Programa Garantia de Giro (4+ caixas, 1ª compra).
+        </div>
+
+        <div id="cr-cta" class="cr-cta" style="display:none">
+          <a id="btn-fechar-pedido" href="#" class="btn-wa full" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Fechar Pedido via WhatsApp
+          </a>
+          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:8px;line-height:1.55">O pedido completo será enviado automaticamente na mensagem. Aguarde confirmação do time comercial.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════ -->
+<section id="faq" data-chapter="FAQ">
+  <div class="container">
+    <div class="sh center reveal">
+      <div class="sh-chapter" style="justify-content:center">07 — Perguntas Frequentes</div>
+      <h2>Respostas diretas para as<br><em>principais dúvidas.</em></h2>
+      <div class="divider c"></div>
+    </div>
+
+    <div class="faq-list reveal" style="max-width:820px;margin:0 auto">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual o pedido mínimo para começar?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          O pedido mínimo para a <strong>primeira compra é 1 caixa com 6 garrafas</strong>. Você pode escolher qualquer produto e qualquer versão (Completo, Pingente ou Só Garrafa). A partir da segunda compra, não há mínimo definido — mas o nível de preço é determinado pelo volume do pedido.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso misturar produtos diferentes no mesmo pedido?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Sim. Você pode combinar Honey, Cappuccino e Blended — em qualquer versão — no mesmo pedido. O <strong>nível de preço é calculado sobre o total de caixas do pedido inteiro</strong>, independente de quantos produtos diferentes você incluir. Use a calculadora acima para simular.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual a diferença entre Completo, Pingente e Só Garrafa?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <strong>Completo:</strong> garrafa + lata decorativa + pingente. Apresentação premium, ideal para presente e exposição em gôndola.<br><br>
+          <strong>Pingente:</strong> garrafa + pingente decorativo (sem a lata). Boa relação custo-benefício para pontos que priorizam preço final menor.<br><br>
+          <strong>Só Garrafa:</strong> apenas a garrafa, sem acessórios. Menor custo unitário, ideal para quem já tem estratégia de exposição própria ou vende para consumo direto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona a nota fiscal e qual o imposto correto?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Os preços da tabela são válidos para Pix ou Boleto <strong>sem nota fiscal</strong>. Se você precisar de nota, o imposto estadual é adicionado sobre o valor da tabela:<br><br>
+          <strong>+12%</strong> para os estados: SP, BA, GO, RJ e SE<br>
+          <strong>+33%</strong> para os demais estados do Brasil<br><br>
+          Informe o estado de entrega no momento do pedido para o cálculo correto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona o frete? Quanto custa?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          O frete é calculado individualmente por pedido, de acordo com o CEP de destino e o volume. <strong>O valor estimado pela calculadora não inclui frete.</strong> Solicite a cotação de frete ao fechar o pedido pelo WhatsApp — o time retorna com o valor antes de confirmar.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como funciona a Garantia de Giro e quais as condições?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          A Garantia de Giro é válida exclusivamente para a <strong>primeira compra com mínimo de 4 caixas (24 garrafas)</strong>. Se você aplicar o plano de vendas orientado pela Mr. Lion e não conseguir girar em 30 dias, a empresa recompra o estoque e devolve o valor pago.<br><br>
+          Condições: produto lacrado, intacto e frete de retorno por conta do parceiro. A garantia é ativada apenas após o apoio comercial ter sido prestado pela equipe Mr. Lion.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso ter CNPJ para comprar?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Sim. Este portal e as condições de preço listadas são <strong>exclusivos para empresas com CNPJ ativo</strong>. Para compras como pessoa física ou varejo, acesse <a href="https://casamrlion.com.br" target="_blank">casamrlion.com.br</a>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Qual o prazo de entrega?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          O prazo varia conforme a localização. Em geral, capitais e regiões Sul/Sudeste recebem em 3 a 7 dias úteis após confirmação do pagamento. Regiões mais distantes podem levar de 7 a 14 dias úteis. O time comercial informa o prazo exato ao fechar o pedido.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como faço o pedido?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Monte seu pedido usando a <a href="#calculadora">calculadora acima</a>, depois clique em "Fechar Pedido via WhatsApp". O detalhamento completo do pedido (produtos, versões, quantidades, valores e forma de pagamento) é enviado automaticamente na mensagem. O time comercial confirma disponibilidade, informa o frete e fecha o pedido.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CTA FINAL
+     ═══════════════════════════════════════════════════════ -->
+<section id="cta-final" data-chapter="Contato">
+  <div class="cta-bg"></div>
+  <div class="cta-inner reveal">
+    <span class="cta-kicker">Pronto para começar?</span>
+    <h2 class="cta-title">
+      Faça parte da rede de 500+ parceiros.<br>
+      <em>Primeiro pedido: 1 caixa.</em>
+    </h2>
+    <p class="cta-sub">
+      Pedido mínimo acessível. Marketing da marca por trás. Garantia de giro para a primeira compra. O risco de entrar é baixo. O de não entrar é perder a oportunidade enquanto outro revende na sua região.
+    </p>
+    <div class="cta-actions">
+      <a href="https://wa.me/5531984463634?text=Olá!%20Quero%20conhecer%20as%20condições%20para%20ser%20parceiro%20Mr.%20Lion." class="btn-wa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com o Time Comercial
+      </a>
+      <a href="#tabela" class="btn-ghost">Ver Tabela de Preços</a>
+    </div>
+    <p class="cta-note">
+      Exclusivo para CNPJ ativo &nbsp;·&nbsp; Frete calculado individualmente &nbsp;·&nbsp; Pix e Boleto sem nota fiscal<br>
+      <strong>@casamrlion</strong> · casamrlion.com.br
+    </p>
+    <div class="trust-strip">
+      <div class="ts-item">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        Empresa com CNPJ ativo
+      </div>
+      <div class="ts-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        Nota fiscal disponível
+      </div>
+      <div class="ts-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        500+ parceiros ativos
+      </div>
+      <div class="ts-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        Garantia de recompra na 1ª compra
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/novalogo.png" alt="Mr. Lion" style="filter:none;opacity:.75">
+        <p>Licores premium brasileiros. Presentes em mais de 500 pontos de venda em todo o Brasil. Parceria com garantia, suporte e marketing real.</p>
+        <span class="fc-cnpj">CNPJ: XX.XXX.XXX/XXXX-XX &nbsp;·&nbsp; Casa Mr. Lion Ltda.</span>
+      </div>
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <ul>
+          <li><a href="#produtos">Linha de Produtos</a></li>
+          <li><a href="#tabela">Tabela de Preços</a></li>
+          <li><a href="#pagamento">Formas de Pagamento</a></li>
+          <li><a href="#beneficios">Benefícios e Kit PDV</a></li>
+          <li><a href="#garantia">Garantia de Giro</a></li>
+          <li><a href="#calculadora">Calculadora de Pedido</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#produtos" onclick="setTimeout(()=>switchProd('honey'),100)">Mr. Lion Honey</a></li>
+          <li><a href="#produtos" onclick="setTimeout(()=>switchProd('capp'),100)">Mr. Lion Cappuccino</a></li>
+          <li><a href="#produtos" onclick="setTimeout(()=>switchProd('blend'),100)">Mr. Lion Blended</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="fc-contact">
+          <p>Time Comercial</p>
+          <p><a href="https://wa.me/5531984463634">WhatsApp Comercial</a></p>
+          <p style="margin-top:12px">Redes Sociais</p>
+          <p><a href="https://instagram.com/casamrlion" target="_blank" rel="noopener">@casamrlion</a></p>
+          <p><a href="https://casamrlion.com.br" target="_blank" rel="noopener">casamrlion.com.br</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="fb-copy">Portal do Parceiro Mr. Lion &copy; 2026 &nbsp;&middot;&nbsp; Uso exclusivo para revendedores CNPJ</div>
+      <div class="fb-legal">
+        Este portal contém informações exclusivas para parceiros B2B.<br>
+        Os preços listados são para Pix/Boleto sem nota fiscal.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
