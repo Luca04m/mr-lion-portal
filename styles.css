@@ -206,17 +206,18 @@ section { padding: var(--section-pad) 0; }
    ═══════════════════════════════════════════════════════════ */
 #hero {
   min-height: 100vh; display: flex; align-items: center;
-  padding-top: 56px; position: relative; overflow: hidden;
+  padding-top: 80px; padding-bottom: 0; position: relative; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 55% 65% at 65% 50%, rgba(201,168,76,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 70% at 70% 45%, rgba(201,168,76,0.07) 0%, transparent 65%),
     var(--black);
 }
 .hero-layout {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1fr 480px; gap: 72px; align-items: center;
+  display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center;
+  padding-bottom: 56px;
 }
 .hero-label {
   display: inline-flex; align-items: center; gap: 8px;
@@ -250,34 +251,15 @@ section { padding: var(--section-pad) 0; }
 
 /* Hero visual — editorial product showcase */
 .hero-visual {
-  position: relative; display: flex;
-  flex-direction: column; align-items: center;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0; position: relative;
 }
-.hero-product-frame {
-  position: relative; width: 100%;
-  background: linear-gradient(160deg, rgba(201,168,76,0.06) 0%, rgba(6,6,6,0) 60%);
-  border: 1px solid var(--border); border-radius: 4px;
-  padding: 48px 32px 32px; text-align: center;
-}
-.hero-product-label {
-  position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
-  background: var(--black); padding: 0 12px;
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold-dk);
-  white-space: nowrap;
-}
-.hero-product-img {
-  width: 200px; height: 340px; object-fit: contain;
-  filter: drop-shadow(0 24px 60px rgba(201,168,76,0.18));
-}
-.hero-product-name {
-  font-family: 'DM Serif Display', serif; font-size: 1.5rem;
-  margin: 16px 0 6px;
-}
-.hero-product-desc { font-size: 0.78rem; color: var(--muted); }
-.hero-product-tabs {
-  display: flex; gap: 0; margin-top: 20px; width: 100%;
+
+/* Product selector tabs — acima da garrafa */
+.hero-prod-selector {
+  display: flex; gap: 0; width: 100%; max-width: 340px;
   border: 1px solid var(--border); border-radius: 3px; overflow: hidden;
+  margin-bottom: 0;
 }
 .hero-ptab {
   flex: 1; padding: 9px 4px; background: transparent; border: none;
@@ -288,25 +270,60 @@ section { padding: var(--section-pad) 0; }
 .hero-ptab:last-child { border-right: none; }
 .hero-ptab.active { background: var(--gold); color: #000; }
 
-/* Hero stats band */
+/* Garrafa com glow */
+.hero-bottle-wrap {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 100%; padding: 24px 0;
+}
+.hero-bottle-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-product-img {
+  width: 220px; height: 380px; object-fit: contain; position: relative; z-index: 1;
+  filter: drop-shadow(0 32px 64px rgba(201,168,76,0.22));
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+/* Nome + desc abaixo da garrafa */
+.hero-prod-info {
+  text-align: center; border-top: 1px solid var(--border);
+  padding-top: 20px; width: 100%; max-width: 340px;
+}
+.hero-product-name {
+  font-family: 'DM Serif Display', serif; font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.hero-product-desc { font-size: 0.78rem; color: var(--muted); }
+
+/* Stats band — full width, abaixo do hero-layout */
 .hero-stats {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  border: 1px solid var(--border); margin-top: 0;
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 -28px; /* sangria para cobrir o container padding */
 }
 .hero-stat {
-  padding: 22px 20px; border-right: 1px solid var(--border);
-  position: relative;
+  padding: 24px 32px;
+  border-right: 1px solid var(--border);
 }
 .hero-stat:last-child { border-right: none; }
 .hero-stat .n {
-  font-family: 'DM Serif Display', serif; font-size: 1.9rem; color: var(--gold);
+  font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--gold);
   line-height: 1; display: block;
 }
-.hero-stat .l { font-size: 0.7rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.hero-stat .l { font-size: 0.7rem; color: var(--muted); margin-top: 5px; line-height: 1.4; }
 
 @media(max-width: 1000px){
   .hero-layout { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); margin: 0; }
+}
+@media(max-width: 540px){
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ═══════════════════════════════════════════════════════════
