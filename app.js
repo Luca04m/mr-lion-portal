@@ -242,11 +242,6 @@ let cart = [];
 function getCalcProduct() { return document.getElementById('calc-prod')?.value || ''; }
 function getCalcVersao()  { return document.querySelector('input[name="calc-versao"]:checked')?.value || ''; }
 function getCalcCaixas()  { return parseInt(document.getElementById('calc-caixas')?.value) || 0; }
-function getNFEnabled()   { return document.getElementById('nf-sim')?.checked || false; }
-function getNFTax()       {
-  const val = document.getElementById('calc-estado')?.value;
-  return val ? parseInt(val) : 0;
-}
 
 function addToCart() {
   const prod   = getCalcProduct();
@@ -333,7 +328,7 @@ function renderCart() {
     </div>
     <div class="cart-subtotal">
       <span>Nível aplicado: <strong style="color:var(--gold)">${NIVEL_LABELS[nivelIdx]} (${NIVEL_RANGES[nivelIdx]})</strong> · ${totalCaixas} caixas / ${totalCaixas*6} garrafas</span>
-      <span>${fmtBRL(rawTotal)} s/ NF</span>
+      <span>${fmtBRL(rawTotal)}</span>
     </div>`;
 }
 
@@ -342,10 +337,6 @@ function renderSummary() {
   const rowsEl    = document.getElementById('cr-rows');
   const totalBlock= document.getElementById('cr-total-block');
   const ctaEl     = document.getElementById('cr-cta');
-  const nfWrap    = document.getElementById('nf-toggle-wrap');
-  const estadoRow = document.getElementById('nf-state-row');
-  const nfEnabled = getNFEnabled();
-  const nfTax     = nfEnabled ? getNFTax() : 0;
 
   if (!emptyEl || !rowsEl || !totalBlock) return;
 
@@ -354,12 +345,8 @@ function renderSummary() {
     rowsEl.style.display    = 'none';
     totalBlock.style.display= 'none';
     if (ctaEl)  ctaEl.style.display  = 'none';
-    if (nfWrap) nfWrap.style.display = 'none';
     return;
   }
-
-  if (nfWrap) nfWrap.style.display = 'block';
-  if (estadoRow) estadoRow.style.display = nfEnabled ? 'block' : 'none';
 
   emptyEl.style.display    = 'none';
   rowsEl.style.display     = 'block';
@@ -370,8 +357,7 @@ function renderSummary() {
   const nivelIdx     = getNivel(totalCaixas);
   const totalGarr    = totalCaixas * 6;
   const subtotal     = cart.reduce((sum, item) => sum + PRICES[item.prod][item.versao][nivelIdx] * item.caixas * 6, 0);
-  const nfVal        = nfTax > 0 ? subtotal * (nfTax / 100) : 0;
-  const total        = subtotal + nfVal;
+  const total        = subtotal;
   const economia     = nivelIdx > 0
     ? cart.reduce((sum, item) => sum + (PRICES[item.prod][item.versao][0] - PRICES[item.prod][item.versao][nivelIdx]) * item.caixas * 6, 0)
     : 0;
@@ -381,13 +367,7 @@ function renderSummary() {
     <div class="cr-row"><span class="rk">Caixas no pedido</span><span class="rv">${totalCaixas} caixas</span></div>
     <div class="cr-row"><span class="rk">Garrafas</span><span class="rv">${totalGarr} unidades</span></div>
     <div class="cr-row"><span class="rk">Nível de preço</span><span class="rv gold">${NIVEL_LABELS[nivelIdx]} · ${NIVEL_RANGES[nivelIdx]}</span></div>
-    <div class="cr-row"><span class="rk">Subtotal (s/NF)</span><span class="rv">${fmtBRL(subtotal)}</span></div>`;
-
-  if (nfEnabled && nfTax > 0) {
-    html += `<div class="cr-row"><span class="rk">Imposto NF (+${nfTax}%)</span><span class="rv gold">+${fmtBRL(nfVal)}</span></div>`;
-  } else if (nfEnabled && nfTax === 0) {
-    html += `<div class="cr-row"><span class="rk">Imposto NF</span><span class="rv" style="color:var(--muted);font-size:.75rem">Selecione o estado</span></div>`;
-  }
+    <div class="cr-row"><span class="rk">Subtotal</span><span class="rv">${fmtBRL(subtotal)}</span></div>`;
 
   if (economia > 0) {
     html += `<div class="cr-row"><span class="rk">Desconto vs. Nível 1</span><span class="rv green">-${fmtBRL(economia)}</span></div>`;
@@ -399,9 +379,7 @@ function renderSummary() {
   const totalValEl   = document.getElementById('cr-total-val');
   const totalNoteEl  = document.getElementById('cr-total-note');
   if (totalValEl)  totalValEl.textContent  = fmtBRL(total);
-  if (totalNoteEl) totalNoteEl.textContent = nfEnabled && nfTax > 0
-    ? `Com nota fiscal · ${nfTax}% imposto estadual`
-    : 'Pix ou Boleto · Sem nota fiscal';
+  if (totalNoteEl) totalNoteEl.textContent = 'Pix ou Boleto';
 
   // Bonuses
   const bonus24   = document.getElementById('cr-bonus-24');
@@ -411,14 +389,10 @@ function renderSummary() {
 
   // Update WhatsApp CTA
   const waBtn = document.getElementById('btn-fechar-pedido');
-  if (waBtn) waBtn.href = buildWhatsAppURL(nivelIdx, subtotal, total, nfEnabled, nfTax);
+  if (waBtn) waBtn.href = buildWhatsAppURL(nivelIdx, subtotal, total);
 }
 
-function toggleNF() {
-  renderSummary();
-}
-
-function buildWhatsAppURL(nivelIdx, subtotal, total, nfEnabled, nfTax) {
+function buildWhatsAppURL(nivelIdx, subtotal, total) {
   const totalCaixas = getTotalCaixas();
   const nivelLabel  = NIVEL_LABELS[nivelIdx] + ' (' + NIVEL_RANGES[nivelIdx] + ')';
 
@@ -435,17 +409,8 @@ function buildWhatsAppURL(nivelIdx, subtotal, total, nfEnabled, nfTax) {
   msg += '\nRESUMO:\n';
   msg += `- Total: ${totalCaixas} caixas / ${totalCaixas * 6} garrafas\n`;
   msg += `- Nível de preço: ${nivelLabel}\n`;
-  msg += `- Subtotal (s/NF): ${fmtBRL(subtotal)}\n`;
-
-  if (nfEnabled && nfTax > 0) {
-    msg += `- Nota fiscal: Sim (+${nfTax}%)\n`;
-    msg += `- TOTAL COM NF: ${fmtBRL(total)}\n`;
-    msg += `- Pagamento: Boleto com nota fiscal\n`;
-  } else {
-    msg += `- Nota fiscal: Não\n`;
-    msg += `- TOTAL: ${fmtBRL(total)}\n`;
-    msg += `- Pagamento: Pix ou Boleto sem nota fiscal\n`;
-  }
+  msg += `- TOTAL: ${fmtBRL(total)}\n`;
+  msg += `- Pagamento: Pix ou Boleto\n`;
 
   msg += '\nAguardo informações sobre frete e confirmação do pedido. Obrigado!';
 
@@ -470,5 +435,4 @@ window.selectVersao = selectVersao;
 window.switchLvl    = switchLvl;
 window.addToCart    = addToCart;
 window.removeFromCart = removeFromCart;
-window.toggleNF     = toggleNF;
 window.renderSummary = renderSummary;
